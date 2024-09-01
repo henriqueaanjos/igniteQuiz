@@ -4,11 +4,15 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { Button } from '../../components/Button';
 
 import { styles } from './styles';
+import Trophy from '../../assets/trophy.svg';
+import { Stars } from '../../components/Stars';
 
 interface Params {
   total: string;
   points: string;
 }
+
+
 
 export function Finish() {
   const route = useRoute();
@@ -19,6 +23,7 @@ export function Finish() {
   return (
     <View style={styles.container}>
       <View style={styles.message}>
+        <Stars/>
         <Text style={styles.title}>
           Parabéns!
         </Text>
